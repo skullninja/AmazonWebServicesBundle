@@ -39,6 +39,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('cloudfront_keypair')->defaultValue(null)->end()
                 ->scalarNode('cloudfront_pem')->defaultValue(null)->end()
                 ->scalarNode('default_cache_config')->defaultValue(null)->end()
+				->scalarNode('assoc_id')->defaultValue(null)->end()
                 ->arrayNode('enable_extensions')
                     ->defaultValue(array())
                     ->prototype('scalar')

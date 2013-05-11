@@ -34,6 +34,7 @@ class AmazonWebServicesFactory
         'ElasticBeanstalk',
         'IAM',
         'ImportExport',
+        'PAS',
         'RDS',
         'S3',
         'SDB',

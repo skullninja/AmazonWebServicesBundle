@@ -23,6 +23,7 @@
                 <argument key="default_cache_config">%cybernox_amazon_web_services.default_cache_config%</argument>
                 <argument key="enable_extensions">%cybernox_amazon_web_services.enable_extensions%</argument>
                 <argument key="certificate_authority">%cybernox_amazon_web_services.certificate_authority%</argument>
+                <argument key="assoc_id">%cybernox_amazon_web_services.assoc_id%</argument>
              </argument>
         </service>
 
@@ -83,6 +84,10 @@
 
         <service id="aws_import_export" class="AmazonImportExport" parent="aws_service">
             <argument>ImportExport</argument>
+        </service>
+        
+        <service id="aws_pas" class="AmazonPAS" parent="aws_service">
+            <argument>PAS</argument>
         </service>
 
         <service id="aws_rds" class="AmazonRDS" parent="aws_service">
