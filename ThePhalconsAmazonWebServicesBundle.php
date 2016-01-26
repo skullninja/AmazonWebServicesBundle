@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Cybernox\AmazonWebServicesBundle;
+namespace AmazonWebServicesBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Cybernox\AmazonWebServicesBundle\StreamWrapper\S3StreamWrapper;
@@ -18,14 +18,14 @@ use Cybernox\AmazonWebServicesBundle\StreamWrapper\S3StreamWrapper;
 /**
  * AmazonWebServicesBundle Main Bundle Class
  */
-class CybernoxAmazonWebServicesBundle extends Bundle
+class ThePhalconsAmazonWebServicesBundle extends Bundle
 {
     /**
      * {@inheritdoc}
      */
     public function boot()
     {
-        if (in_array('s3', $this->container->getParameter('cybernox_amazon_web_services.enable_extensions'))) {
+        if (in_array('s3', $this->container->getParameter('the_phalcons_amazon_web_services.enable_extensions'))) {
             if (in_array('s3', stream_get_wrappers())) {
                 stream_wrapper_unregister('s3');
             }

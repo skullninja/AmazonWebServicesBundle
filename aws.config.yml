@@ -1,0 +1,32 @@
+
+thephalcons_amazon_web_services:
+    # for stream wrapper use : [S3, SES ...]
+    enable_extensions:              []
+    credentials:
+        key:                        <YOUR APP KEY>
+        secret:                     <YOUT APP SECRET>
+    shared_config:
+        region:                     %aws_region%
+        version:                    %aws_version%
+        account_id:                 %aws_account_id%
+        canonical_id:               %aws_canonical_id%
+        canonical_name:             %aws_canonical_name%
+        mfa_serial:                 %aws_mfa_serial%
+        cloudfront_keypair:         %aws_cloudfront_keypair%
+        cloudfront_pem:             %aws_cloudfront_pem%
+        default_cache_config:       null
+        certificate_authority:      false
+        disable_auto_config:        false
+    services:
+
+        S3:
+            bucket:                 <YOUR BUCKET NAME>
+            #... add all used bucket like assets bucket or upload bucket, can be accessed
+            # using container in your code
+        CloudFront:
+            web_distribution:    http://xxxxxxxxxxxxxx.cloudfront.net
+            #upload_distribution:   http://xxxxxxxxxxxxxx.cloudfront.net
+        SES:
+            verified_addresse:      <YOUR Verified @>
+            #for more information how to use SES service
+            #http://docs.aws.amazon.com/aws-sdk-php/v2/guide/service-ses.html
