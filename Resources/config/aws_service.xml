@@ -13,7 +13,7 @@
         <service id="aws" class="%aws.class%" public="false">
             <argument type="collection">
                 <argument key="enable_extensions">%the_phalcons_amazon_web_services.enable_extensions%</argument>
-                <argument key="assoc_id">%the_phalcons_amazon_web_services.assoc_id%</argument>
+                <argument key="assoc_id">%the_phalcons_amazon_web_services.shared_config.assoc_id%</argument>
                 <argument key="key">%the_phalcons_amazon_web_services.credentials.key%</argument>
                 <argument key="secret">%the_phalcons_amazon_web_services.credentials.secret%</argument>
                 <argument key="account_id">%the_phalcons_amazon_web_services.shared_config.account_id%</argument>
